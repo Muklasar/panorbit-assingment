@@ -1,10 +1,19 @@
-import logo from './logo.svg';
 import './App.css';
+import { Routes, Route } from 'react-router-dom'
+import { Suspense, lazy } from 'react';
+
+const Landing = lazy(()=> import('./components/LandingPage'))
 
 function App() {
   return (
     <div className="App">
-      Assignment
+      <Routes>
+        <Route path="/" element={ 
+          <Suspense fallback="Loading..">
+            <Landing />
+          </Suspense>
+         } />
+      </Routes>
     </div>
   );
 }

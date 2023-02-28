@@ -1,0 +1,90 @@
+.landing-container{
+    height: 120vh;
+    width: 100vw;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+svg {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.container {
+    display: inline-block;
+    position: absolute;
+    width: 100%;
+    padding-bottom: 100%;
+    vertical-align: middle;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+body{
+    overflow-x: hidden;
+    font-family: 'Poppings', sans-serif;
+}
+
+.landing-card{
+    width: 500px;
+    height: 500px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    z-index: -2;
+    border-radius: 20px;
+}
+
+.landing-card-heading{
+    height: 100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #dcdcdc;
+    border-radius: 20px 20px 0 0;
+}
+
+.landing-card-heading-text{
+    font-size: 22px;
+    font-weight: 600;
+    color: rgb(115 115 115);
+}
+
+.landing-card-body{
+    padding: 5px 30px;
+}
+
+.landing-card-profile{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding: 6px 0px;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+}
+
+.landing-card-profile-image{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    object-fit: contain;
+    /* border: 1px solid #ddd; */
+}
+
+.landing-card-profile-image img{
+    border-radius: 50%;
+    width:100%;
+    height:100%
+}
+
+.landing-card-profile p{
+    font-size: 14px;
+    font-weight: 600;
+    margin-left: 10px;
+    color: rgb(115 115 115);
+    font-family: 'Roboto', sans-serif;
+
+}
