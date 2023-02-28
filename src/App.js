@@ -2,7 +2,7 @@ import './App.css';
 import { Routes, Route } from 'react-router-dom'
 import { Suspense, lazy } from 'react';
 
-const Landing = lazy(()=> import('./components/LandingPage'))
+const Landing = lazy(()=> import('./components/Landing/LandingPage'))
 
 function App() {
   return (

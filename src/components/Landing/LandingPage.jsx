@@ -1,5 +1,5 @@
 import './landingPage.css'
-import ProfileImage from '../assests/profile-image-20.jpg'
+import ProfileImage from '../../assests/profile-image-20.jpg'
 
 const LandingPage = () => {
     return (
