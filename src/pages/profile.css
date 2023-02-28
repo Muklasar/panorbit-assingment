@@ -1,0 +1,22 @@
+.profile-wrapper{
+    padding: 30px;
+    position: relative;
+}
+
+.profile-sidebar-wrapper{
+    position: absolute;
+    left: 30px;
+    width: 250px;
+    /* border: 1px solid red; */
+}
+
+.profile-right-wrapper{
+    margin-left: 280px;
+    border: 1px solid red;
+}
+
+.profile-content-wrapper{
+    /* height: 100%;
+    border: 1px solid red; */
+    /* margin-top: 20px; */
+}
