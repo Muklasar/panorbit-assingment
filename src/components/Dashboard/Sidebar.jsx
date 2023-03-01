@@ -1,4 +1,7 @@
-import { NavLink } from 'react-router-dom'
+import { useEffect } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { NavLink, useParams } from 'react-router-dom'
+import { getUserId } from '../../store/actions/UserAction'
 import './sidebar.css'
 
 const arrowSvg = <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
@@ -6,10 +9,11 @@ const arrowSvg = <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" 
 </svg>
 
 const ProfileSidebar = () => {
+    const id = localStorage.getItem('id')
     return (
         <div className="sidebar-container">
             <div className="sidebar-title-box">
-                <NavLink to="/dashboard/profile/1" className={navData=> navData.isActive ? 'sidebar-title-active' : 'sidebar-title-deactive'}>
+                <NavLink to={`/dashboard/profile/${id}`} className={navData=> navData.isActive ? 'sidebar-title-active' : 'sidebar-title-deactive'}>
                     <p>Profile</p>
                     <div>{arrowSvg}</div>
                 </NavLink>

@@ -3,7 +3,7 @@ import ProfileImage from '../assests/profile-image-20.jpg'
 import { useSelector, useDispatch } from 'react-redux'
 import { userAction } from '../store/reducers/UserReducer'
 import { useEffect } from 'react'
-import { fetchUserData } from '../store/actions/UserAction'
+import { fetchUserData, getUserId } from '../store/actions/UserAction'
 import { useNavigate } from 'react-router-dom'
 
 const LandingPage = () => {
@@ -11,8 +11,9 @@ const LandingPage = () => {
     const users = useSelector(user => user.user.data)
     console.log('data', users)
     const navigationHandler = (id) => {
-        console.log('id', id)
+        localStorage.setItem('id', id)
         navigate(`/dashboard/profile/${id}`)
+        window.location.reload()
     }
     const allUsers = users?.map((user) => {
         let id = user.id

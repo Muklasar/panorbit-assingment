@@ -6,6 +6,7 @@ import { useEffect, useState } from 'react';
 
 const Profile = () => {
     const users = useSelector(user => user.user.data)
+    const uid = useSelector(user => user.user.id)
     const { id } = useParams()
     const user = users?.filter(user => user.id == id)[0]
     const [center, setCenter] = useState({
@@ -19,7 +20,7 @@ const Profile = () => {
         })
     }, [user])
 
-    // console.log('profile_id', center)
+    console.log('profile_id', uid)
 
     return (
         <div className="row dashboard-profile-container">
