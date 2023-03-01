@@ -6,8 +6,9 @@ import { useEffect, useState } from 'react';
 
 const Profile = () => {
     const users = useSelector(user => user.user.data)
-    const uid = useSelector(user => user.user.id)
+    // const uid = useSelector(user => user.user.id)
     const { id } = useParams()
+    // const id = localStorage.getItem('id')
     const user = users?.filter(user => user.id == id)[0]
     const [center, setCenter] = useState({
         lat: 43.6532,
@@ -20,13 +21,13 @@ const Profile = () => {
         })
     }, [user])
 
-    console.log('profile_id', uid)
+    // console.log('profile_id', uid)
 
     return (
         <div className="row dashboard-profile-container">
             <div className='col-4 dashboard-profile-left'>
                 <div className='dashboard-profile-left-top'>
-                    <img src={user.profilepicture} />
+                    <img src={user?.profilepicture} />
                     <p>{user?.name}</p>
                 </div>
                 <div className='dashboard-profile-left-middle'>

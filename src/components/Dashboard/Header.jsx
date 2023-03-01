@@ -19,6 +19,11 @@ const Header = () => {
     const modalHandler = () => {
         setModal(!modal)
     }
+    const navigateHandler = (id) =>{
+        localStorage.setItem('id', id)
+        navigate(`/dashboard/profile/${id}`)
+        window.location.reload()
+    }
     return (
         <div className='position-relative'>
 
@@ -36,13 +41,13 @@ const Header = () => {
                         <div>{user?.name}</div>
                         <p>{user?.email}</p>
                     </div>
-                    <div className='profile-list'>
-                        <img src={user?.profilepicture} />
-                        <p>{user?.name}</p>
+                    <div className='profile-list' onClick={()=>navigateHandler(users[2]?.id)}>
+                        <img src={users[2]?.profilepicture} />
+                        <p>{users[2]?.name}</p>
                     </div>
-                    <div className='profile-list'>
-                        <img src={user?.profilepicture} />
-                        <p>{user?.name}</p>
+                    <div className='profile-list' onClick={()=>navigateHandler(users[6]?.id)}>
+                        <img src={users[6]?.profilepicture} />
+                        <p>{users[6]?.name}</p>
                     </div>
                     <button className='signout-button' onClick={logout}>
                         Sign out
