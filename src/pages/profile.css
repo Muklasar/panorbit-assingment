@@ -5,14 +5,15 @@
 
 .profile-sidebar-wrapper{
     position: absolute;
-    left: 30px;
-    width: 250px;
+    left: 40px;
+    top: 35px;
+    width: 225px;
     /* border: 1px solid red; */
 }
 
 .profile-right-wrapper{
     margin-left: 280px;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
 .profile-content-wrapper{

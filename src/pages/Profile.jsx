@@ -1,5 +1,5 @@
 import { Outlet } from "react-router-dom"
-import ProfileHeader from "../components/Profile/ProfileHeader"
+import ProfileHeader from "../components/Profile/Header"
 import ProfileSidebar from "../components/Profile/Sidebar"
 import './profile.css'
 
