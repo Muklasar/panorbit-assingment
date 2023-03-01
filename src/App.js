@@ -2,12 +2,12 @@ import './App.css';
 import { Routes, Route } from 'react-router-dom'
 import { Suspense, lazy } from 'react';
 
-const Landing = lazy(() => import('./components/Landing/LandingPage'))
-const Profile = lazy(() => import('./pages/Profile'))
-const MyProfile = lazy(() => import('./components/Profile/MyProfile'))
-const Post = lazy(() => import('./components/Profile/Post'))
-const Gallary = lazy(() => import('./components/Profile/Gallary'))
-const Todos = lazy(() => import('./components/Profile/Todos'))
+const Landing = lazy(() => import('./pages/LandingPage'))
+const Dashboard = lazy(() => import('./pages/Dashboard'))
+const Profile = lazy(() => import('./components/Profile/Profile'))
+const Post = lazy(() => import('./components/Post/Post'))
+const Gallary = lazy(() => import('./components/Gallary/Gallary'))
+const Todos = lazy(() => import('./components/Todos/Todos'))
 
 function App() {
   return (
@@ -20,12 +20,12 @@ function App() {
         } />
         <Route path="/profile" element={
           <Suspense fallback="Loading..">
-            <Profile />
+            <Dashboard />
           </Suspense>
         } >
           <Route exact path="profile" element={
             <Suspense fallback="Loading..">
-              <MyProfile />
+              <Profile />
             </Suspense>} />
           <Route exact path="post" element={
             <Suspense fallback="Loading..">

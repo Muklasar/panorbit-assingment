@@ -1,7 +1,7 @@
-const MyProfile = () =>{
+const Profile = () =>{
     return(
         <div>My profile</div>
     )
 }
 
-export default MyProfile
+export default Profile

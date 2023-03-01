@@ -1,9 +1,9 @@
-.profile-wrapper{
+.dashboard-wrapper{
     padding: 30px;
     position: relative;
 }
 
-.profile-sidebar-wrapper{
+.dashboard-sidebar-wrapper{
     position: absolute;
     left: 40px;
     top: 35px;
@@ -11,12 +11,12 @@
     /* border: 1px solid red; */
 }
 
-.profile-right-wrapper{
+.dashboard-right-wrapper{
     margin-left: 280px;
     /* border: 1px solid red; */
 }
 
-.profile-content-wrapper{
+.dashboard-content-wrapper{
     /* height: 100%;
     border: 1px solid red; */
     /* margin-top: 20px; */

@@ -1,4 +1,4 @@
-.profile-sidebar-container{
+.sidebar-container{
     height: 100vh;
     width: 100%;
     background-color: rgb(30 64 175);
@@ -9,7 +9,7 @@
     justify-content: center;
 }
 
-.profile-sidebar-title-box{
+.sidebar-title-box{
     /* border: 1px solid red; */
     width: 100%;
     padding: 0 0 0 30px;
@@ -17,7 +17,7 @@
 
 /* sidebar title activate */
 
-.profile-sidebar-title-active{
+.sidebar-title-active{
     width: 100%;
     display: flex;
     align-items: center;
@@ -29,7 +29,7 @@
     line-height: 20px;
 }
 
-.profile-sidebar-title-active p {
+.sidebar-title-active p {
     color: white;
     font-size: 17px;
     border-bottom: 1px solid #fdfdfd;
@@ -39,7 +39,7 @@
 }
 
 
-.profile-sidebar-title-active > div{
+.sidebar-title-active > div{
     background-color: #fff;
     height: 60%;
     width: 15%;
@@ -53,7 +53,7 @@
 
 /* deactive sidebar title */
 
-.profile-sidebar-title-deactive{
+.sidebar-title-deactive{
     width: 100%;
     display: flex;
     align-items: center;
@@ -65,7 +65,7 @@
     line-height: 20px;
 }
 
-.profile-sidebar-title-deactive p {
+.sidebar-title-deactive p {
     color: rgb(241 245 244);
     font-size: 16px;
     border-bottom: 1px solid rgb(245 245 244);
@@ -75,6 +75,6 @@
     font-weight: 400;
 }
 
-.profile-sidebar-title-deactive > div{
+.sidebar-title-deactive > div{
     display: none;
 }

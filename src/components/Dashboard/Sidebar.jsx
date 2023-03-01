@@ -7,21 +7,21 @@ const arrowSvg = <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" 
 
 const ProfileSidebar = () => {
     return (
-        <div className="profile-sidebar-container">
-            <div className="profile-sidebar-title-box">
-                <NavLink to="/profile/profile" className={navData=> navData.isActive ? 'profile-sidebar-title-active' : 'profile-sidebar-title-deactive'}>
+        <div className="sidebar-container">
+            <div className="sidebar-title-box">
+                <NavLink to="/profile/profile" className={navData=> navData.isActive ? 'sidebar-title-active' : 'sidebar-title-deactive'}>
                     <p>Profile</p>
                     <div>{arrowSvg}</div>
                 </NavLink>
-                <NavLink to="/profile/post" className={navData=> navData.isActive ? 'profile-sidebar-title-active' : 'profile-sidebar-title-deactive'}>
+                <NavLink to="/profile/post" className={navData=> navData.isActive ? 'sidebar-title-active' : 'sidebar-title-deactive'}>
                     <p>Post</p>
                     <div>{arrowSvg}</div>
                 </NavLink>
-                <NavLink to="/profile/gallary" className={navData=> navData.isActive ? 'profile-sidebar-title-active' : 'profile-sidebar-title-deactive'}>
+                <NavLink to="/profile/gallary" className={navData=> navData.isActive ? 'sidebar-title-active' : 'sidebar-title-deactive'}>
                     <p>Gallary</p>
                     <div>{arrowSvg}</div>
                 </NavLink>
-                <NavLink to="/profile/todos" className={navData=> navData.isActive ? 'profile-sidebar-title-active' : 'profile-sidebar-title-deactive'}>
+                <NavLink to="/profile/todos" className={navData=> navData.isActive ? 'sidebar-title-active' : 'sidebar-title-deactive'}>
                     <p>Todos</p>
                     <div>{arrowSvg}</div>
                 </NavLink>
