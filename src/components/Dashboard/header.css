@@ -4,6 +4,7 @@
     justify-content: space-between;
     padding: 12px 10px 20px 0;
     border-bottom: 1px solid #aaa;
+    position: relative;
 }
 
 .header-left{
@@ -33,4 +34,69 @@
     font-weight: 400;
     color: #555;
     margin-bottom: -1px;
+}
+
+/* profile modal */
+
+.profile-modal{
+    position: absolute;
+    top: 53px;
+    right: 10px;
+    width: 250px;
+    height: 350px;
+    z-index: 999;
+    border-radius: 20px;
+    background-color: #fff;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.profile-modal-upper{
+    margin-top: 35px;
+}
+.profile-modal-upper > img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.profile-modal-upper > div{
+    margin-top: 5px;
+}
+.profile-modal-upper > p{
+    /* margin-top: 2px; */
+    color: #aaa;
+}
+.profile-list{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border-top: 1px solid #bbb;
+    margin: 0 25px;
+    cursor: pointer;
+}
+.profile-list img{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+}
+
+.profile-list p{
+    margin-left: 10px;
+    font-size: 13px;
+    font-weight: 400;
+    color: #111;
+    margin-bottom: -1px;
+}
+
+/* sinup section */
+
+.signout-button{
+    margin-top: 12px;
+    border: none;
+    padding: 5px 15px;
+    background-color: tomato;
+    color: #fff;
+    border-radius: 20px;
+    font-weight: 600;
 }

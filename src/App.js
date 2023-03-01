@@ -3,6 +3,7 @@ import { Routes, Route } from 'react-router-dom'
 import { Suspense, lazy, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { fetchUserData } from './store/actions/UserAction';
+import DashdoardPermission from './components/Dashboard/DashdoardPermission';
 
 const Landing = lazy(() => import('./pages/LandingPage'))
 const Dashboard = lazy(() => import('./pages/Dashboard'))
@@ -26,7 +27,9 @@ function App() {
         } />
         <Route path="/dashboard" element={
           <Suspense fallback="Loading..">
-            <Dashboard />
+            <DashdoardPermission>
+              <Dashboard />
+            </DashdoardPermission>
           </Suspense>
         } >
           <Route exact path="profile/:id" element={
