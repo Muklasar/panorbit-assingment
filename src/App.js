@@ -1,6 +1,8 @@
 import './App.css';
 import { Routes, Route } from 'react-router-dom'
-import { Suspense, lazy } from 'react';
+import { Suspense, lazy, useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import { fetchUserData } from './store/actions/UserAction';
 
 const Landing = lazy(() => import('./pages/LandingPage'))
 const Dashboard = lazy(() => import('./pages/Dashboard'))
@@ -10,6 +12,10 @@ const Gallary = lazy(() => import('./components/Gallary/Gallary'))
 const Todos = lazy(() => import('./components/Todos/Todos'))
 
 function App() {
+  const dispatch = useDispatch()
+  useEffect(() => {
+    dispatch(fetchUserData())
+  }, [])
   return (
     <div className="App">
       <Routes>
@@ -18,12 +24,12 @@ function App() {
             <Landing />
           </Suspense>
         } />
-        <Route path="/profile" element={
+        <Route path="/dashboard" element={
           <Suspense fallback="Loading..">
             <Dashboard />
           </Suspense>
         } >
-          <Route exact path="profile" element={
+          <Route exact path="profile/:id" element={
             <Suspense fallback="Loading..">
               <Profile />
             </Suspense>} />

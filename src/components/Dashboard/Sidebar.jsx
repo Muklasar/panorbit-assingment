@@ -9,19 +9,19 @@ const ProfileSidebar = () => {
     return (
         <div className="sidebar-container">
             <div className="sidebar-title-box">
-                <NavLink to="/profile/profile" className={navData=> navData.isActive ? 'sidebar-title-active' : 'sidebar-title-deactive'}>
+                <NavLink to="/dashboard/profile/1" className={navData=> navData.isActive ? 'sidebar-title-active' : 'sidebar-title-deactive'}>
                     <p>Profile</p>
                     <div>{arrowSvg}</div>
                 </NavLink>
-                <NavLink to="/profile/post" className={navData=> navData.isActive ? 'sidebar-title-active' : 'sidebar-title-deactive'}>
+                <NavLink to="/dashboard/post" className={navData=> navData.isActive ? 'sidebar-title-active' : 'sidebar-title-deactive'}>
                     <p>Post</p>
                     <div>{arrowSvg}</div>
                 </NavLink>
-                <NavLink to="/profile/gallary" className={navData=> navData.isActive ? 'sidebar-title-active' : 'sidebar-title-deactive'}>
+                <NavLink to="/dashboard/gallary" className={navData=> navData.isActive ? 'sidebar-title-active' : 'sidebar-title-deactive'}>
                     <p>Gallary</p>
                     <div>{arrowSvg}</div>
                 </NavLink>
-                <NavLink to="/profile/todos" className={navData=> navData.isActive ? 'sidebar-title-active' : 'sidebar-title-deactive'}>
+                <NavLink to="/dashboard/todos" className={navData=> navData.isActive ? 'sidebar-title-active' : 'sidebar-title-deactive'}>
                     <p>Todos</p>
                     <div>{arrowSvg}</div>
                 </NavLink>

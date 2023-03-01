@@ -9,19 +9,20 @@ const containerStyle = {
 
 
 function SimpleMap({ center }) {
+    const {lat, lng} = center
     const mapRef = useRef();
     const { isLoaded } = useJsApiLoader({
         id: 'google-map-script',
         googleMapsApiKey: process.env.REACT_APP_GOOGLE_MAPS_API_KEY
     })
-
+    console.log('center', center)
     const [map, setMap] = React.useState(null)
 
-    // const panTo = useCallback(({ lat, lng }) => {
-    //     console.log("mapLocations", lat, lan)
-    //     mapRef.current.panTo({ lat, lng });
-    //     mapRef.current.setZoom(5);
-    // }, []);
+    const panTo = useCallback(({ lat, lng }) => {
+        console.log("mapLocations", lat, lng)
+        mapRef.current.panTo({ lat, lng });
+        mapRef.current.setZoom(5);
+    }, []);
     const onMapLoad = useCallback((map) => {
         mapRef.current = map;
     }, []);
@@ -30,7 +31,7 @@ function SimpleMap({ center }) {
         <GoogleMap
             mapContainerStyle={containerStyle}
             center={center}
-            zoom={10}
+            zoom={2}
             onLoad={onMapLoad}
         >
             { /* Child components, such as markers, info windows, etc. */}

@@ -1,6 +1,10 @@
 const Gallary = () =>{
     return(
-        <div>Gallary</div>
+        <div className="post-container">
+            <div className="comming-soon">
+                Comming Soon
+            </div>
+        </div>
     )
 }
 

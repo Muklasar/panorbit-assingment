@@ -1,7 +1,29 @@
 import './landingPage.css'
 import ProfileImage from '../assests/profile-image-20.jpg'
+import { useSelector, useDispatch } from 'react-redux'
+import { userAction } from '../store/reducers/UserReducer'
+import { useEffect } from 'react'
+import { fetchUserData } from '../store/actions/UserAction'
+import { useNavigate } from 'react-router-dom'
 
 const LandingPage = () => {
+    const navigate = useNavigate()
+    const users = useSelector(user => user.user.data)
+    console.log('data', users)
+    const navigationHandler = (id) => {
+        console.log('id', id)
+        navigate(`/dashboard/profile/${id}`)
+    }
+    const allUsers = users?.map((user) => {
+        let id = user.id
+        return (
+            <div className='landing-card-profile' onClick={() => navigationHandler(id)}>
+                <div className='landing-card-profile-image'>
+                    <img src={user.profilepicture} />
+                </div>
+                <p className=''>{user.name}</p>
+            </div>)
+    })
     return (
         <div className="landing-container">
             <div className="landing-card">
@@ -9,18 +31,7 @@ const LandingPage = () => {
                     <div className='landing-card-heading-text'>Select an account</div>
                 </div>
                 <div className='landing-card-body'>
-                    <div className='landing-card-profile'>
-                        <div className='landing-card-profile-image'>
-                            <img src={ProfileImage}/>
-                        </div>
-                        <p>Muklasar Rahaman</p>
-                    </div>
-                    <div className='landing-card-profile'>
-                        <div className='landing-card-profile-image'>
-                            <img src={ProfileImage}/>
-                        </div>
-                        <p>Muklasar Rahaman</p>
-                    </div>
+                    {allUsers}
                 </div>
             </div>
             {/* <div class="container">

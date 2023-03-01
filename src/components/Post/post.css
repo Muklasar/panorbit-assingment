@@ -1,0 +1,14 @@
+.post-container{
+    width: 70vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.comming-soon{
+    color: #ddd;
+    font-size: 80px;
+    font-weight: 900;
+}
+

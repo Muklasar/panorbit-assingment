@@ -1,6 +1,12 @@
+import './post.css'
+
 const Post = () =>{
     return(
-        <div>Post</div>
+        <div className="post-container">
+            <div className="comming-soon">
+                Comming Soon
+            </div>
+        </div>
     )
 }
 

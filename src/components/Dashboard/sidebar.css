@@ -1,5 +1,5 @@
 .sidebar-container{
-    height: 120vh;
+    height: 130vh;
     width: 100%;
     background-color: rgb(30 64 175);
     opacity: .9;
@@ -7,6 +7,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: 50px;
 }
 
 .sidebar-title-box{
